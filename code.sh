@@ -13,7 +13,7 @@ gen64() {
 }
 install_3proxy() {
     echo "installing 3proxy"
-    URL="https://raw.githubusercontent.com/quayvlog/quayvlog/main/3proxy-3proxy-0.8.6.tar.gz"
+    URL="https://github.com/3proxy/3proxy/archive/refs/tags/0.9.4.tar.gz"
     wget -qO- $URL | bsdtar -xvf-
     cd 3proxy-3proxy-0.8.6
     make -f Makefile.Linux
@@ -63,7 +63,7 @@ upload_proxy() {
 }
 gen_data() {
     seq $FIRST_PORT $LAST_PORT | while read port; do
-        echo "//$IP4/$port/$(gen64 $IP6)"
+        echo "duong/gnoud/$IP4/$port/$(gen64 $IP6)"
     done
 }
 
